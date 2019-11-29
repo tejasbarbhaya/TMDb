@@ -1,0 +1,6 @@
+framework module TMDbLib {
+  umbrella header "TMDbLib.h"
+
+  export *
+  module * { export * }
+}
