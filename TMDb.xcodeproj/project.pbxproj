@@ -10,8 +10,8 @@
 		684274A023A6304600AA3CA5 /* APIKeyStorageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842749F23A6304600AA3CA5 /* APIKeyStorageVC.m */; };
 		684274A523A634A600AA3CA5 /* NSString+AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 684274A123A634A600AA3CA5 /* NSString+AESCrypt.m */; };
 		684274A623A634A600AA3CA5 /* NSData+AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 684274A223A634A600AA3CA5 /* NSData+AESCrypt.m */; };
-		684274C523A6563900AA3CA5 /* TMDbLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 684274C323A6562300AA3CA5 /* TMDbLib.framework */; };
-		684274C623A6563900AA3CA5 /* TMDbLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 684274C323A6562300AA3CA5 /* TMDbLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6862502323A65EEB0089660B /* TMDbLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6862502223A65EEB0089660B /* TMDbLib.framework */; };
+		6862502423A65EF00089660B /* TMDbLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6862502223A65EEB0089660B /* TMDbLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		967918E1238FEAAC00731BBC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 967918E0238FEAAC00731BBC /* AppDelegate.m */; };
 		967918E7238FEAAC00731BBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 967918E5238FEAAC00731BBC /* Main.storyboard */; };
 		967918E9238FEAB500731BBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 967918E8238FEAB500731BBC /* Assets.xcassets */; };
@@ -24,11 +24,11 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		684274C723A6563900AA3CA5 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				684274C623A6563900AA3CA5 /* TMDbLib.framework in Embed Frameworks */,
+				6862502423A65EF00089660B /* TMDbLib.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,7 +42,7 @@
 		684274A223A634A600AA3CA5 /* NSData+AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AESCrypt.m"; sourceTree = "<group>"; };
 		684274A323A634A600AA3CA5 /* NSData+AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AESCrypt.h"; sourceTree = "<group>"; };
 		684274A423A634A600AA3CA5 /* NSString+AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AESCrypt.h"; sourceTree = "<group>"; };
-		684274C323A6562300AA3CA5 /* TMDbLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TMDbLib.framework; sourceTree = "<group>"; };
+		6862502223A65EEB0089660B /* TMDbLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TMDbLib.framework; sourceTree = "<group>"; };
 		967918DC238FEAAC00731BBC /* TMDb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMDb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		967918DF238FEAAC00731BBC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		967918E0238FEAAC00731BBC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				684274C523A6563900AA3CA5 /* TMDbLib.framework in Frameworks */,
+				6862502323A65EEB0089660B /* TMDbLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +73,7 @@
 		967918D3238FEAAC00731BBC = {
 			isa = PBXGroup;
 			children = (
-				684274C323A6562300AA3CA5 /* TMDbLib.framework */,
+				6862502223A65EEB0089660B /* TMDbLib.framework */,
 				967918DE238FEAAC00731BBC /* TMDb */,
 				967918DD238FEAAC00731BBC /* Products */,
 				96DFD91023913F06008FDFC3 /* Frameworks */,
