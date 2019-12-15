@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		684274A023A6304600AA3CA5 /* APIKeyStorageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842749F23A6304600AA3CA5 /* APIKeyStorageVC.m */; };
+		684274A523A634A600AA3CA5 /* NSString+AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 684274A123A634A600AA3CA5 /* NSString+AESCrypt.m */; };
+		684274A623A634A600AA3CA5 /* NSData+AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 684274A223A634A600AA3CA5 /* NSData+AESCrypt.m */; };
+		684274C523A6563900AA3CA5 /* TMDbLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 684274C323A6562300AA3CA5 /* TMDbLib.framework */; };
+		684274C623A6563900AA3CA5 /* TMDbLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 684274C323A6562300AA3CA5 /* TMDbLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		967918E1238FEAAC00731BBC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 967918E0238FEAAC00731BBC /* AppDelegate.m */; };
 		967918E7238FEAAC00731BBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 967918E5238FEAAC00731BBC /* Main.storyboard */; };
 		967918E9238FEAB500731BBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 967918E8238FEAB500731BBC /* Assets.xcassets */; };
@@ -14,18 +19,16 @@
 		967918EF238FEAB500731BBC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 967918EE238FEAB500731BBC /* main.m */; };
 		967918FA238FEC2200731BBC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 967918F8238FEC2200731BBC /* ViewController.m */; };
 		967918FD238FF0BF00731BBC /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 967918FC238FF0BF00731BBC /* MovieCell.m */; };
-		96DFD90F23913EF9008FDFC3 /* TMDbLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 96DFD90C23913E9A008FDFC3 /* TMDbLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		96DFD91223913F06008FDFC3 /* TMDbLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DFD91123913F06008FDFC3 /* TMDbLib.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		967919302390261C00731BBC /* Embed Frameworks */ = {
+		684274C723A6563900AA3CA5 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				96DFD90F23913EF9008FDFC3 /* TMDbLib.framework in Embed Frameworks */,
+				684274C623A6563900AA3CA5 /* TMDbLib.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,6 +36,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6842749E23A6304600AA3CA5 /* APIKeyStorageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIKeyStorageVC.h; sourceTree = "<group>"; };
+		6842749F23A6304600AA3CA5 /* APIKeyStorageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIKeyStorageVC.m; sourceTree = "<group>"; };
+		684274A123A634A600AA3CA5 /* NSString+AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AESCrypt.m"; sourceTree = "<group>"; };
+		684274A223A634A600AA3CA5 /* NSData+AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AESCrypt.m"; sourceTree = "<group>"; };
+		684274A323A634A600AA3CA5 /* NSData+AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AESCrypt.h"; sourceTree = "<group>"; };
+		684274A423A634A600AA3CA5 /* NSString+AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AESCrypt.h"; sourceTree = "<group>"; };
+		684274C323A6562300AA3CA5 /* TMDbLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TMDbLib.framework; sourceTree = "<group>"; };
 		967918DC238FEAAC00731BBC /* TMDb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMDb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		967918DF238FEAAC00731BBC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		967918E0238FEAAC00731BBC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -46,8 +56,6 @@
 		967918FB238FF0BF00731BBC /* MovieCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
 		967918FC238FF0BF00731BBC /* MovieCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
 		9679190223900DB400731BBC /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
-		96DFD90C23913E9A008FDFC3 /* TMDbLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TMDbLib.framework; sourceTree = "<group>"; };
-		96DFD91123913F06008FDFC3 /* TMDbLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TMDbLib.framework; path = "../../../../Library/Developer/Xcode/DerivedData/TMDbLib-dsnaeaqkemfugremusrftdbekpux/Build/Products/Debug-iphonesimulator/TMDbLib.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96DFD91223913F06008FDFC3 /* TMDbLib.framework in Frameworks */,
+				684274C523A6563900AA3CA5 /* TMDbLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,7 +73,7 @@
 		967918D3238FEAAC00731BBC = {
 			isa = PBXGroup;
 			children = (
-				96DFD90C23913E9A008FDFC3 /* TMDbLib.framework */,
+				684274C323A6562300AA3CA5 /* TMDbLib.framework */,
 				967918DE238FEAAC00731BBC /* TMDb */,
 				967918DD238FEAAC00731BBC /* Products */,
 				96DFD91023913F06008FDFC3 /* Frameworks */,
@@ -83,7 +91,6 @@
 		967918DE238FEAAC00731BBC /* TMDb */ = {
 			isa = PBXGroup;
 			children = (
-				967918F5238FEC2200731BBC /* Model */,
 				967918F6238FEC2200731BBC /* Utility */,
 				967918F7238FEC2200731BBC /* View */,
 				967918DF238FEAAC00731BBC /* AppDelegate.h */,
@@ -97,13 +104,6 @@
 			path = TMDb;
 			sourceTree = "<group>";
 		};
-		967918F5238FEC2200731BBC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		967918F6238FEC2200731BBC /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,10 +115,16 @@
 		967918F7238FEC2200731BBC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				684274A323A634A600AA3CA5 /* NSData+AESCrypt.h */,
+				684274A223A634A600AA3CA5 /* NSData+AESCrypt.m */,
+				684274A423A634A600AA3CA5 /* NSString+AESCrypt.h */,
+				684274A123A634A600AA3CA5 /* NSString+AESCrypt.m */,
 				967918F8238FEC2200731BBC /* ViewController.m */,
 				967918F9238FEC2200731BBC /* ViewController.h */,
 				967918FB238FF0BF00731BBC /* MovieCell.h */,
 				967918FC238FF0BF00731BBC /* MovieCell.m */,
+				6842749E23A6304600AA3CA5 /* APIKeyStorageVC.h */,
+				6842749F23A6304600AA3CA5 /* APIKeyStorageVC.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -126,7 +132,6 @@
 		96DFD91023913F06008FDFC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				96DFD91123913F06008FDFC3 /* TMDbLib.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -141,7 +146,7 @@
 				967918D8238FEAAC00731BBC /* Sources */,
 				967918D9238FEAAC00731BBC /* Frameworks */,
 				967918DA238FEAAC00731BBC /* Resources */,
-				967919302390261C00731BBC /* Embed Frameworks */,
+				684274C723A6563900AA3CA5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -202,8 +207,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				684274A623A634A600AA3CA5 /* NSData+AESCrypt.m in Sources */,
 				967918FA238FEC2200731BBC /* ViewController.m in Sources */,
 				967918EF238FEAB500731BBC /* main.m in Sources */,
+				684274A023A6304600AA3CA5 /* APIKeyStorageVC.m in Sources */,
+				684274A523A634A600AA3CA5 /* NSString+AESCrypt.m in Sources */,
 				967918FD238FF0BF00731BBC /* MovieCell.m in Sources */,
 				967918E1238FEAAC00731BBC /* AppDelegate.m in Sources */,
 			);
@@ -348,6 +356,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = ZZ9797F4Z7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -369,6 +378,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = ZZ9797F4Z7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

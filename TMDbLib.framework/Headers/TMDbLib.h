@@ -18,3 +18,6 @@ FOUNDATION_EXPORT const unsigned char TMDbLibVersionString[];
 
 
 #import <TMDbLib/NetworkManager.h>
+#import <TMDbLib/FilterUtility.h>
+#import <TMDbLib/RootClass.h>
+#import <TMDbLib/Result.h>

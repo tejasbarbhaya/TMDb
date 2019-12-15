@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MovieCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *lblMovieName;
+@property (weak, nonatomic) IBOutlet UILabel *lblReleaseDate;
+@property (weak, nonatomic) IBOutlet UILabel *lblRating;
 
 @end
 

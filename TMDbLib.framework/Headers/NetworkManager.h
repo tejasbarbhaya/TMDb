@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RootClass.h"
+
 
 @interface NetworkManager : NSObject
 
-+(NetworkManager *) getObject;
--(void) doNetworkCall:(NSString *) url complition:(void(^)(NSDictionary* dict,NSError *error)) callback;
++ (id)sharedManager; //returns static object of NetworkManager Class
+-(void) doNetworkCall:(NSString *) url complition:(void(^)(RootClass* dict,NSError *error)) callback; //accept the url and return with filtered / parsed object
 
 @end
 

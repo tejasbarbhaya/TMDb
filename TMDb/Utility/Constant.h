@@ -10,6 +10,7 @@
 #define Constant_h
 
 #define BaseUrl @"https://api.themoviedb.org/3/search/movie?"
-
+#define kdefaultAPIKey @"79f2c5824c3f077112e26bb0dd4694a3"
+#define kEncryptionPassword @"password123"
 
 #endif /* Constant_h */

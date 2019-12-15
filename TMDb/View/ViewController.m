@@ -7,13 +7,14 @@
 //
 
 #import "ViewController.h"
-#import "MovieCell.h"
-#import <TMDbLib/TMDbLib.h>
-#import "Constant.h"
+
+
 
 @interface ViewController () <UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UISearchBar *serchBar;
 @property(weak,nonatomic) NSString *apiKey;
+@property(nonatomic,retain) RootClass *objResult;
+@property(nonatomic,retain) AppDelegate *delegate;
 @end
 
 @implementation ViewController
@@ -23,8 +24,8 @@
     // Do any additional setup after loading the view.
     
     self.serchBar.delegate = self;
-    _apiKey = @"79f2c5824c3f077112e26bb0dd4694a3";
-
+    _delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
 }
 
 #pragma mark - Table View Delegate Methods
@@ -36,7 +37,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+   return self.objResult.results.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -44,8 +45,12 @@
 {
     
     MovieCell *cell = (MovieCell *) [self.tblView dequeueReusableCellWithIdentifier:@"cellid"];
-    	
-    cell.lblMovieName.text = [[NSString alloc] initWithFormat:@"Please check log for output, since demo is not fully completed."];
+    Result *objResult = (Result *) [self.objResult.results objectAtIndex:indexPath.row];
+    cell.lblMovieName.text = objResult.title;
+    cell.lblReleaseDate.text = objResult.releaseDate;
+    cell.lblRating.text = [NSString stringWithFormat:@"%.1f",objResult.voteAverage];
+    
+    
 
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
     return cell;
@@ -68,26 +73,57 @@
 #pragma mark - Network Call
 
 -(void) getMovie:(NSString *) searchText {
+    
     NSString *finalsearchText = [searchText stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-    if (finalsearchText.length <= 0) {
+    /*if (finalsearchText.length <= 0) {
         return;
     }else{
         finalsearchText = [finalsearchText stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLHostAllowedCharacterSet];
-    }
+    }*/
     
-    NSString *url = [NSString stringWithFormat:@"%@api_key=%@&query=%@",BaseUrl,_apiKey,finalsearchText];
+    NSString *url = [NSString stringWithFormat:@"%@api_key=%@&query=%@",BaseUrl,_delegate.getAPIKey,finalsearchText];
    
-    
-    NetworkManager *obj = NetworkManager.getObject;
-    [obj doNetworkCall:url complition:^(NSDictionary *dict, NSError *error) {
+    [NetworkManager.sharedManager doNetworkCall:url complition:^(RootClass *dict, NSError *error) {
         if (error != nil) {
             NSLog(@"\n in VC Error:%@",[error description]);
-            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.objResult = dict;
+                [self.tblView reloadData];
+                 [self showErrorAlert];
+            });
         }else{
-            NSLog(@"\n in VC response : %@",dict);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (dict == nil) {
+                    [self showErrorAlert];
+                }
+                NSLog(@"\n Response :%@",dict);
+                self.objResult = dict;
+                [self.tblView reloadData];
+            });
+            
         }
     }];
 }
 
+-(void) showErrorAlert {
+    UIAlertController * alert = [UIAlertController
+                     alertControllerWithTitle:@"Error"
+                                      message:@"No Network Connection OR API Key is incorrect"
+                               preferredStyle:UIAlertControllerStyleAlert];
+
+
+
+     UIAlertAction* yesButton = [UIAlertAction
+                         actionWithTitle:@"Ok"
+                                   style:UIAlertActionStyleDefault
+                                 handler:^(UIAlertAction * action) {
+                                     //Handle your yes please button action here
+                                 }];
+
+    
+
+     [alert addAction:yesButton];
+     [self presentViewController:alert animated:YES completion:nil];
+}
 @end
 

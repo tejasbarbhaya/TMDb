@@ -17,6 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
     return YES;
 }
 
@@ -46,6 +48,26 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+#pragma mark - APIKey Methods
+
+-(NSString *) getAPIKey {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    if ([userDefault valueForKey:@"apiKey"] == nil) {
+        [self setAPIKey:kdefaultAPIKey];
+    }
+    NSString *apiKey = [(NSString *)[userDefault valueForKey:@"apiKey"] AES256DecryptWithKey:kEncryptionPassword];
+    NSLog(@"\n APIKey :%@",apiKey);
+    return apiKey;
+}
+
+-(void) setAPIKey:(NSString *) apiKey {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    apiKey = [apiKey AES256EncryptWithKey:kEncryptionPassword];
+    [userDefault setValue:apiKey forKey:@"apiKey"]; // store encrypted value of APIKey
+    NSLog(@"\n APIKey Encrypted:%@",[userDefault valueForKey:@"apiKey"]);
+}
+
 
 
 @end

@@ -4,17 +4,29 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/FilterUtility.h</key>
+		<data>
+		azHSSjtn8baIjHNAQ183ecE2lYA=
+		</data>
 		<key>Headers/NetworkManager.h</key>
 		<data>
-		I/ZS9vUPtR/2dvuQYFN018m07NY=
+		aeP8TVfJySJKx0XPC31OUxcfiuo=
+		</data>
+		<key>Headers/Result.h</key>
+		<data>
+		UissHTjixu8wEVNb3+wbgpEx8xg=
+		</data>
+		<key>Headers/RootClass.h</key>
+		<data>
+		Bzaa1vL51tBbGrzedLCwTllMhfc=
 		</data>
 		<key>Headers/TMDbLib.h</key>
 		<data>
-		wJveB6Hz+tLtbvhff44h9z6Ryuc=
+		CmCdswCQrBlxllhlIM7OKmWo9LQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		hrsIiM8GT52B3u9Cb79GgcDoOYc=
+		1FirteZXyzLGXEDTZe82pXFOK0k=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -23,18 +35,39 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/FilterUtility.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			R5RzDSdYVBbQ3BSBHrxviJoHmSgPHYC7ELGHOKmFMXw=
+			</data>
+		</dict>
 		<key>Headers/NetworkManager.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			binmgUihI9t7Ij3iv0CHreINyLhoNr2OWQxnRLdAP6Y=
+			qF6UF89Cb/Vp0KeFi7P06io/ntSa52UQBkcyTl88Grk=
+			</data>
+		</dict>
+		<key>Headers/Result.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LBW8Mn39PI2/A6wBNkzD+Sn7/NlK9Clf3G7Um6qDre0=
+			</data>
+		</dict>
+		<key>Headers/RootClass.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			lcn4rIPw4sC1pUNJViGA5kA9EMci0XaVRONEIuIQL/o=
 			</data>
 		</dict>
 		<key>Headers/TMDbLib.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MpQ+cMCKg2Md1858h/gJf7c9eagENhOXB0Xb/9CUSg0=
+			82fm700FRYiRm2tdKXxfpwvBiYT42RSo0JTYeuh67Xk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
